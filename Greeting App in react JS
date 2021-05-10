@@ -1,0 +1,32 @@
+import react from 'react';
+import reactDom from 'react-dom';
+
+let currentDate = new Date( );
+currentDate = currentDate.getHours();
+
+let greetings = '';
+const cssStyle = {};
+
+const DivStyle = {
+  textAlign : 'center',
+  padding: '10px'
+};
+
+if(currentDate>=1 && currentDate<12){
+  greetings = 'Good Morning';
+  cssStyle.color = "Green";
+}else if(currentDate>=12 && currentDate<19){
+  greetings = 'Good Afternoon';
+  cssStyle.color = "orange";
+
+}else{
+  greetings = 'Good Night';
+  cssStyle.color = "darkblue";
+}
+
+
+reactDom.render(
+  <div style={DivStyle}>
+<h1> hello world, <span style={cssStyle}>{greetings}</span> </h1></div>,
+  document.getElementById("root")
+);
