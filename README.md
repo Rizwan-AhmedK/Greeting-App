@@ -1,0 +1,3 @@
+This is a simple and basic greeting app, which works according to the time and greet. 
+for example:
+when Time is 1-12 (hours) the it says Good Morming...
